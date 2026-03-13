@@ -1,0 +1,495 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Benguiat";
+    src: url(fontes/Benguiat\ Bold.ttf);
+}
+
+html, body{
+  overflow-x: hidden !important;
+}
+
+body {
+  background-color: #0c0102;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Poppins";
+  overflow-x: hidden;
+}
+
+button{
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw;
+  position: absolute;
+  z-index: 9;
+}
+
+section{
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+}
+
+  h2{
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+button{
+        background-color: transparent;
+        color: white;
+        font-size: 16px;
+        display: flex;
+        gap: 12px;
+        border: none;
+        outline: none;
+        padding: 16px 0px;
+        border-bottom: 1px solid white;
+    }
+
+    /* Preloader */
+    #preloader{
+      width: 100%;
+      height: 100vh;
+      background-color: #0c0102;
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg{
+        width: 40vw;
+        height: auto;
+
+        path{
+          fill: rgba(168, 19, 19, 0.363);
+          stroke: rgb(168, 19, 19);
+          stroke-dasharray: 640;
+          stroke-dashoffset: 640;
+        }
+      }
+    }
+
+    .bgMonstro{
+      background-image: url("imagens/bg-sec2.webp");
+      background-position: center;
+      background-size: cover;
+      z-index: 2;
+      position: relative;
+      background-color: #0c0102;
+    }
+
+    ul{
+      list-style-type: none;
+    }
+
+.hero {
+  background-position: 50% 0%;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7vw 7vw 7vw;
+  position: relative;
+
+  picture{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+  }
+
+  .esquerda, .direita{
+    width: 30%;
+    z-index: 3;
+  }
+
+  .esquerda {
+    h3{
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 4px;
+    }
+    h1{
+        font-size: 3.7vw;
+        font-family: "Benguiat";
+    }
+  }
+
+  .direita{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    p{
+        font-size: 2vw;
+        margin-bottom: 32px;
+        text-align: end;
+    }
+  }
+}
+
+.hero:before{
+  content: "";
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0, 00) 0%, #0c0102 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+
+.secaoCidade{
+ flex-direction: column;
+ position: relative;
+
+ .titulo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+ }
+
+ .cards{
+  margin-top: 52px;
+  display: flex;
+  justify-content: space-between;
+
+  .card{
+    background-image: url("imagens/card1.webp");
+    width: 32%;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .card:nth-child(2){
+    background-image: url("imagens/card2.webp");
+  }
+
+    .card:nth-child(3){
+    background-image: url("imagens/card3.webp");
+  }
+ }
+}
+
+.secaoDepoimentos{
+  flex-direction: column;
+
+  .logotipos{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+.depoimentos {
+    margin-top: 62px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Espaço entre os cards */
+
+    .depoimento { 
+      width: 45%; /* Ajustado para 2 cards caberem bem */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;  /* Corta as sobras sem achatar a imagem */
+        margin-bottom: 20px;
+        border: 2px solid #ff0000; /* Borda vermelha tema Stranger Things */
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+}
+
+.secaoObrigado{
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #0c0102;
+  z-index: 2;
+
+  h2{
+    margin-bottom: 40px;
+  }
+
+  ul{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  }
+}
+
+footer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(imagens/bg-footer.webp);
+  background-size: cover;
+  background-position: center;
+  
+  .conteudoFooter{
+    display: flex;
+    width: 100%;
+    padding: 7vw;
+
+    .logoFooter{
+      width: 30%;
+    h3 {
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 4px;
+    }
+    h2{
+        font-size: 3.7vw;
+        font-family: "Benguiat";
+    }
+    }
+
+    .secoesFooter{
+      display: flex;
+      flex: 1;
+      justify-content: end;
+      gap: 6%;
+      align-items: end;
+
+      h3{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+
+      .social{
+        ul{
+          display: flex;
+          gap: 12px;
+        }
+      }
+
+    }
+  }
+      .logotiposFooter{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      pad: 0 4vw;
+    }
+
+    .textoInfinito{
+      width: max-content;
+      display: flex;
+
+      h3{
+        color: rgb(194, 191, 191);
+        font-size: 12vw;
+        font-family: "Benguiat", sans-serif;
+        mix-blend-mode: color-dodge;
+        animation: textoInfinito 10s infinite linear;
+        padding: 8vw;
+      }
+    }
+}
+
+@keyframes textoInfinito{
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+/* media queries */
+
+@media (max-width:1500px){
+  .secaoCidade{
+    padding: 4vw;
+  }
+}
+
+@media (max-width:1400px){
+  .secaoCidade .cards .card{
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+}
+
+@media (max-width: 600px){
+  section{
+    padding: 4vw;
+  }
+
+  h2{
+    font-size: 6vw;
+  }
+
+  header h2{
+    font-size: 28px;
+  }
+
+  .hero{
+    flex-direction: column;
+    padding: 26% 4vw 0;
+
+    .esquerda, .direita{
+      width: 100%;
+    }
+
+    .esquerda{
+      h3, h1{
+        text-align: center;
+      }
+
+      h1{
+        font-size: 12vw;
+      }
+    }
+
+    .direita{
+      align-items: start;
+      p{
+        font-size: 5.5vw;
+        text-align: start;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .secaoCidade{
+    margin-top: 80px;
+    button{
+      display: none;
+    }
+
+    .cards{
+      margin-top: 20px;
+      flex-direction: column;
+      gap: 20px;
+
+      .card{
+        width: 100%;
+      }
+    }
+  }
+
+  .secaoDepoimentos{
+    .logotipos{
+      img:nth-child(1), img:nth-child(3){
+        width: 20%;
+      }
+      img:nth-child(2){
+        width: 40%;
+      }
+    }
+
+    .depoimentos{
+      flex-direction: column;
+      gap: 48px;
+
+      .depoimentos{
+        width: 100%;
+      }
+    }
+  }
+
+  .secaoObrigado{
+    margin: 40px 0px 60px;
+    h2{
+      text-align: center;
+    }
+    ul{
+      width: max-content;
+      gap: 32px;
+    }
+  }
+
+  footer{
+    padding-top: 40px;
+    .conteudoFooter{
+      padding: 4vw;
+      flex-direction: column;
+
+      .logoFooter{
+        width: 100%;
+
+        h2, h3{
+          text-align: center;
+        }
+        h2{
+          font-size: 12vw;
+        }
+      }
+
+      .secoesFooter{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+
+        .social{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin: 40px 0px 32px;
+        }
+
+        .institucional{
+          width: 40%;
+        }
+
+        .parceiro img{
+          width: 50%;
+
+          img{
+            width: 100%;
+          }
+        }
+      }
+
+      
+    }
+
+    .logotiposFooter{
+      margin-top: 40px;
+    }
+
+    .textoInfinito h3{
+      font-size: 20vw;
+    }
+  }
+}
